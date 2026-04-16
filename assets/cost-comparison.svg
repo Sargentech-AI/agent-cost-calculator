@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+  <rect width="900" height="420" fill="#0b1020"/>
+  <text x="40" y="50" fill="#ffffff" font-size="28" font-family="Arial, sans-serif" font-weight="700">Agent Cost Calculator — Example Monthly Cost Comparison</text>
+  <text x="40" y="82" fill="#94a3b8" font-size="16" font-family="Arial, sans-serif">Scenario assumptions: 50 tasks/week, 6 worker types, April 2026 pricing.</text>
+  <line x1="120" y1="330" x2="840" y2="330" stroke="#334155" stroke-width="2"/>
+  <g font-family="Arial, sans-serif">
+    <rect x="150" y="180" width="130" height="150" fill="#ef4444" rx="10"/>
+    <text x="170" y="355" fill="#e2e8f0" font-size="18">Cloud Sonnet</text>
+    <text x="180" y="170" fill="#ffffff" font-size="24" font-weight="700">$79</text>
+
+    <rect x="340" y="95" width="130" height="235" fill="#f97316" rx="10"/>
+    <text x="352" y="355" fill="#e2e8f0" font-size="18">Cloud Premium</text>
+    <text x="360" y="85" fill="#ffffff" font-size="24" font-weight="700">$142</text>
+
+    <rect x="530" y="49" width="130" height="281" fill="#10b981" rx="10"/>
+    <text x="565" y="355" fill="#e2e8f0" font-size="18">Hybrid</text>
+    <text x="550" y="39" fill="#ffffff" font-size="24" font-weight="700">$134</text>
+
+    <rect x="720" y="210" width="130" height="120" fill="#3b82f6" rx="10"/>
+    <text x="738" y="355" fill="#e2e8f0" font-size="18">Local Heavy</text>
+    <text x="740" y="200" fill="#ffffff" font-size="24" font-weight="700">$100</text>
+  </g>
+  <text x="40" y="390" fill="#94a3b8" font-size="14" font-family="Arial, sans-serif">Hybrid includes $100/month hardware amortisation. Adjust with cost_calculator.py for your own workload.</text>
+</svg>

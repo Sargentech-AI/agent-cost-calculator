@@ -1,0 +1,267 @@
+{
+  "cloud-only-sonnet": {
+    "scenario": "Cloud Only (Sonnet for everything)",
+    "tasks_per_week": 50,
+    "tasks_per_month": 216.0,
+    "api_cost_monthly": 79.08,
+    "hardware_amortized": 0,
+    "total_monthly": 79.08,
+    "local_ratio": "0%",
+    "breakdown": {
+      "research": {
+        "model": "Claude Sonnet 4.6",
+        "location": "cloud",
+        "tasks_per_month": 43.3,
+        "cost": 20.13,
+        "per_task": 0.465
+      },
+      "writing": {
+        "model": "Claude Sonnet 4.6",
+        "location": "cloud",
+        "tasks_per_month": 43.3,
+        "cost": 19.49,
+        "per_task": 0.45
+      },
+      "code": {
+        "model": "Claude Sonnet 4.6",
+        "location": "cloud",
+        "tasks_per_month": 32.5,
+        "cost": 29.23,
+        "per_task": 0.9
+      },
+      "qa": {
+        "model": "Claude Sonnet 4.6",
+        "location": "cloud",
+        "tasks_per_month": 32.5,
+        "cost": 6.33,
+        "per_task": 0.195
+      },
+      "triage": {
+        "model": "Claude Sonnet 4.6",
+        "location": "cloud",
+        "tasks_per_month": 32.5,
+        "cost": 2.44,
+        "per_task": 0.075
+      },
+      "monitoring": {
+        "model": "Claude Sonnet 4.6",
+        "location": "cloud",
+        "tasks_per_month": 32.5,
+        "cost": 1.46,
+        "per_task": 0.045
+      }
+    }
+  },
+  "cloud-only-premium": {
+    "scenario": "Cloud Only (Opus for code, Sonnet for rest)",
+    "tasks_per_week": 50,
+    "tasks_per_month": 216.0,
+    "api_cost_monthly": 195.99,
+    "hardware_amortized": 0,
+    "total_monthly": 195.99,
+    "local_ratio": "0%",
+    "breakdown": {
+      "research": {
+        "model": "Claude Sonnet 4.6",
+        "location": "cloud",
+        "tasks_per_month": 43.3,
+        "cost": 20.13,
+        "per_task": 0.465
+      },
+      "writing": {
+        "model": "Claude Sonnet 4.6",
+        "location": "cloud",
+        "tasks_per_month": 43.3,
+        "cost": 19.49,
+        "per_task": 0.45
+      },
+      "code": {
+        "model": "Claude Opus 4.6",
+        "location": "cloud",
+        "tasks_per_month": 32.5,
+        "cost": 146.14,
+        "per_task": 4.5
+      },
+      "qa": {
+        "model": "Claude Sonnet 4.6",
+        "location": "cloud",
+        "tasks_per_month": 32.5,
+        "cost": 6.33,
+        "per_task": 0.195
+      },
+      "triage": {
+        "model": "Claude Sonnet 4.6",
+        "location": "cloud",
+        "tasks_per_month": 32.5,
+        "cost": 2.44,
+        "per_task": 0.075
+      },
+      "monitoring": {
+        "model": "Claude Sonnet 4.6",
+        "location": "cloud",
+        "tasks_per_month": 32.5,
+        "cost": 1.46,
+        "per_task": 0.045
+      }
+    }
+  },
+  "hybrid": {
+    "scenario": "Hybrid (80% local, cloud for complex work)",
+    "tasks_per_week": 50,
+    "tasks_per_month": 216.0,
+    "api_cost_monthly": 146.14,
+    "hardware_amortized": 100,
+    "total_monthly": 246.14,
+    "local_ratio": "83%",
+    "breakdown": {
+      "research": {
+        "model": "Qwen 2.5 14B",
+        "location": "local",
+        "tasks_per_month": 43.3,
+        "cost": 0.0,
+        "per_task": 0.0
+      },
+      "writing": {
+        "model": "Qwen 2.5 14B",
+        "location": "local",
+        "tasks_per_month": 43.3,
+        "cost": 0.0,
+        "per_task": 0.0
+      },
+      "code": {
+        "model": "Claude Opus 4.6",
+        "location": "cloud",
+        "tasks_per_month": 32.5,
+        "cost": 146.14,
+        "per_task": 4.5
+      },
+      "qa": {
+        "model": "Qwen 2.5 14B",
+        "location": "local",
+        "tasks_per_month": 32.5,
+        "cost": 0.0,
+        "per_task": 0.0
+      },
+      "triage": {
+        "model": "Qwen 2.5 14B",
+        "location": "local",
+        "tasks_per_month": 32.5,
+        "cost": 0.0,
+        "per_task": 0.0
+      },
+      "monitoring": {
+        "model": "Qwen 2.5 7B",
+        "location": "local",
+        "tasks_per_month": 32.5,
+        "cost": 0.0,
+        "per_task": 0.0
+      }
+    }
+  },
+  "hybrid-balanced": {
+    "scenario": "Hybrid Balanced (local + Sonnet for research/writing)",
+    "tasks_per_week": 50,
+    "tasks_per_month": 216.0,
+    "api_cost_monthly": 185.76,
+    "hardware_amortized": 100,
+    "total_monthly": 285.76,
+    "local_ratio": "50%",
+    "breakdown": {
+      "research": {
+        "model": "Claude Sonnet 4.6",
+        "location": "cloud",
+        "tasks_per_month": 43.3,
+        "cost": 20.13,
+        "per_task": 0.465
+      },
+      "writing": {
+        "model": "Claude Sonnet 4.6",
+        "location": "cloud",
+        "tasks_per_month": 43.3,
+        "cost": 19.49,
+        "per_task": 0.45
+      },
+      "code": {
+        "model": "Claude Opus 4.6",
+        "location": "cloud",
+        "tasks_per_month": 32.5,
+        "cost": 146.14,
+        "per_task": 4.5
+      },
+      "qa": {
+        "model": "Qwen 2.5 14B",
+        "location": "local",
+        "tasks_per_month": 32.5,
+        "cost": 0.0,
+        "per_task": 0.0
+      },
+      "triage": {
+        "model": "Qwen 2.5 14B",
+        "location": "local",
+        "tasks_per_month": 32.5,
+        "cost": 0.0,
+        "per_task": 0.0
+      },
+      "monitoring": {
+        "model": "Qwen 2.5 7B",
+        "location": "local",
+        "tasks_per_month": 32.5,
+        "cost": 0.0,
+        "per_task": 0.0
+      }
+    }
+  },
+  "local-heavy": {
+    "scenario": "Local Heavy (everything local, cloud fallback only)",
+    "tasks_per_week": 50,
+    "tasks_per_month": 216.0,
+    "api_cost_monthly": 0.0,
+    "hardware_amortized": 100,
+    "total_monthly": 100.0,
+    "local_ratio": "100%",
+    "breakdown": {
+      "research": {
+        "model": "Qwen 2.5 14B",
+        "location": "local",
+        "tasks_per_month": 43.3,
+        "cost": 0.0,
+        "per_task": 0.0
+      },
+      "writing": {
+        "model": "Qwen 2.5 14B",
+        "location": "local",
+        "tasks_per_month": 43.3,
+        "cost": 0.0,
+        "per_task": 0.0
+      },
+      "code": {
+        "model": "Qwen 2.5 14B",
+        "location": "local",
+        "tasks_per_month": 32.5,
+        "cost": 0.0,
+        "per_task": 0.0
+      },
+      "qa": {
+        "model": "Qwen 2.5 14B",
+        "location": "local",
+        "tasks_per_month": 32.5,
+        "cost": 0.0,
+        "per_task": 0.0
+      },
+      "triage": {
+        "model": "Qwen 2.5 14B",
+        "location": "local",
+        "tasks_per_month": 32.5,
+        "cost": 0.0,
+        "per_task": 0.0
+      },
+      "monitoring": {
+        "model": "Qwen 2.5 14B",
+        "location": "local",
+        "tasks_per_month": 32.5,
+        "cost": 0.0,
+        "per_task": 0.0
+      }
+    }
+  }
+}

@@ -4,6 +4,14 @@ Calculate your AI agent infrastructure costs. Compare cloud-only vs hybrid local
 
 Based on real numbers from a production multi-agent stack running since October 2025.
 
+## Why this exists
+
+Most teams experimenting with AI agents underestimate two things:
+- how fast premium-model costs stack up once tasks become multi-turn workflows
+- how much margin improves when routine work shifts local while cloud models stay reserved for high-value reasoning
+
+This calculator makes that trade-off visible in a few seconds.
+
 ## Quick Start
 
 ```bash
@@ -23,18 +31,30 @@ python3 cost_calculator.py --interactive
 - **Hardware break-even** — how many months until local hardware pays for itself
 - **Per-task cost** — average cost per agent task by type
 
-## Real Numbers From Production
+## Proof / example output
 
-Our stack processes 50+ tasks/week across 6 worker types:
+- Example JSON output: [`assets/example-output.json`](assets/example-output.json)
+- Example comparison graphic: [`assets/cost-comparison.svg`](assets/cost-comparison.svg)
+
+Typical comparison from the bundled defaults:
 
 | Scenario | Monthly Cost | Notes |
 |----------|-------------|-------|
-| Cloud-only (all Sonnet) | ~$1,200/month | Every task hits the API |
-| Cloud-only (Opus for code) | ~$1,800/month | Premium model for coding |
-| **Hybrid (our setup)** | **~$400/month** | 80% local, 20% cloud |
-| Hardware amortized | +$100/month | Mac Studio over 36 months |
+| Cloud-only (all Sonnet) | ~$79/month | API only, no local compute |
+| Cloud-only (Opus for code) | ~$142/month | Premium model for coding |
+| **Hybrid (our setup)** | **~$134/month** | Includes $100/month hardware amortisation |
+| Local-heavy | ~$100/month | Hardware amortisation dominates |
 
-**Break-even on hardware: 4-5 months.**
+The numbers above are what the script currently outputs from the included assumptions. Change workload, routing, and task mix to fit your environment.
+
+## Real Numbers From Production
+
+Our broader operating stack processes 50+ tasks/week across 6 worker types.
+The strategic takeaway is not “local is always cheaper.”
+It is:
+- route routine work to local/cheap models
+- reserve premium inference for high-stakes tasks
+- measure blended operating cost, not headline token price
 
 ## Model Pricing (April 2026)
 
@@ -70,6 +90,13 @@ python3 cost_calculator.py --format json > costs.json
 
 - Python 3.9+
 - No dependencies (stdlib only)
+
+## Assumptions and limits
+
+- This is a directional planning tool, not a billing reconciliation engine.
+- Token assumptions are based on multi-turn agent workflows, not single prompt/response chats.
+- Local-model cost is represented through hardware amortisation, not token accounting.
+- You should update pricing if your provider costs or routing rules change.
 
 ## License
 
